@@ -34,7 +34,17 @@ namespace TestPLCConnection
         public static List<byte> ReadMultipleBytes(int numBytes, int db, int startByteAdr = 0)
         {
             List<byte> resultBytes = new List<byte>();
-
+            int index = startByteAdr;
+            while (numBytes > 0)
+            {
+                var maxToRead = (int)Math.Min(numBytes, 200);
+                byte[] bytes = ReadBytes(DataType.DataBlock, db, index, (int)maxToRead);
+                if (bytes == null)
+                    return new List<byte>();
+                resultBytes.AddRange(bytes);
+                numBytes -= maxToRead;
+                index += maxToRead;
+            }
 
             return resultBytes;
         }
