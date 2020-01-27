@@ -15,10 +15,20 @@ namespace TestPLCConnection
             if (plc.IsAvailable)
             {
                 plc.Open();
-                if (!plc.IsConnected)
+                if (plc.IsConnected)
                 {
                     //this reads first 200 bytes of DB1
-                    var bytes = plc.ReadBytes(DataType.DataBlock, 1, 0, 200);
+                    var bytes = plc.ReadBytes(DataType.DataBlock, 9000, 0, 200);
+
+                    // Try get structure tag using struct
+                    RollingMillStructTag test = (RollingMillStructTag)plc.ReadStruct(typeof(RollingMillStructTag), 9000);
+
+                    //Try get structure tag using class
+                    RollingMillStructTagClass testClass = new RollingMillStructTagClass();
+                    plc.ReadClass(testClass, 9000);
+
+
+                    
                 }
                 else
                     Console.WriteLine("Connection not alive");
@@ -40,13 +50,31 @@ namespace TestPLCConnection
                 var maxToRead = (int)Math.Min(numBytes, 200);
                 byte[] bytes = ReadBytes(DataType.DataBlock, db, index, (int)maxToRead);
                 if (bytes == null)
-                    return new List<byte>();
+                    return resultBytes;
                 resultBytes.AddRange(bytes);
                 numBytes -= maxToRead;
                 index += maxToRead;
             }
 
             return resultBytes;
+        }
+
+        public struct RollingMillStructTag 
+        {
+            public UInt32 DWordNF;
+            public UInt32 DWordNZR;
+            public UInt32 DWordVF;
+            public UInt32 DWordVPR;
+            public UInt32 DWOrdVZR;
+        }
+
+        public class RollingMillStructTagClass
+        {
+            public UInt32 DWordNF { get; set; }
+            public UInt32 DWordNZR { get; set; }
+            public UInt32 DWordVF { get; set; }
+            public UInt32 DWordVPR { get; set; }
+            public UInt32 DWOrdVZR { get; set; }
         }
     }
 }
