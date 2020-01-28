@@ -17,18 +17,23 @@ namespace TestPLCConnection
                 plc.Open();
                 if (plc.IsConnected)
                 {
-                    //this reads first 200 bytes of DB1
+                    //this reads first 200 bytes of DB1 - - does't work getting 0
                     var bytes = plc.ReadBytes(DataType.DataBlock, 9000, 0, 200);
 
-                    // Try get structure tag using struct
+                    // Try get structure tag using struct - does't work getting 0
                     RollingMillStructTag test = (RollingMillStructTag)plc.ReadStruct(typeof(RollingMillStructTag), 9000);
 
-                    //Try get structure tag using class
+                    //Try get structure tag using class - does't work getting 0
                     RollingMillStructTagClass testClass = new RollingMillStructTagClass();
                     plc.ReadClass(testClass, 9000);
 
+                    for (int i = 24; i <= 2292; i+=126)
+                    {
+                        var buffer = new RollingMill();
+                        buffer.GM[i]= plc.Read(DataType.DataBlock, 9000, i, VarType.DWord, 1);                        
+                    }
 
-                    
+
                 }
                 else
                     Console.WriteLine("Connection not alive");
@@ -68,13 +73,6 @@ namespace TestPLCConnection
             public UInt32 DWOrdVZR;
         }
 
-        public class RollingMillStructTagClass
-        {
-            public UInt32 DWordNF { get; set; }
-            public UInt32 DWordNZR { get; set; }
-            public UInt32 DWordVF { get; set; }
-            public UInt32 DWordVPR { get; set; }
-            public UInt32 DWOrdVZR { get; set; }
-        }
+        
     }
 }
