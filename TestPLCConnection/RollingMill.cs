@@ -10,28 +10,28 @@ namespace TestPLCConnection
     {
         public RollingMill()
         {
-            GM = new object[18];
+           // GM = new uint[18];
             
         }
-        public object [] GM { get; set; }
-        public UInt32 G1 { get; set; }
-        public UInt32 G2 { get; set; }
-        public UInt32 G3 { get; set; }
-        public UInt32 G4 { get; set; }
-        public UInt32 G5 { get; set; }
-        public UInt32 G6 { get; set; }
-        public UInt32 G7 { get; set; }
-        public UInt32 G8 { get; set; }
-        public UInt32 G9 { get; set; }
-        public UInt32 G10 { get; set; }
-        public UInt32 G11 { get; set; }
-        public UInt32 G12 { get; set; }
-        public UInt32 G13 { get; set; }
-        public UInt32 G14 { get; set; }
-        public UInt32 G15 { get; set; }
-        public UInt32 G16 { get; set; }
-        public UInt32 G17 { get; set; }
-        public UInt32 G18 { get; set; }
+        //public uint [] GM { get; set; }
+        public uint G01 { get; set; }
+        public uint G02 { get; set; }
+        public uint G03 { get; set; }
+        public uint G04 { get; set; }
+        public uint G05 { get; set; }
+        public uint G06 { get; set; }
+        public uint G07 { get; set; }
+        public uint G08 { get; set; }
+        public uint G09 { get; set; }
+        public uint G10 { get; set; }
+        public uint G11 { get; set; }
+        public uint G12 { get; set; }
+        public uint G13 { get; set; }
+        public uint G14 { get; set; }
+        public uint G15 { get; set; }
+        public uint G16 { get; set; }
+        public uint G17 { get; set; }
+        public uint G18 { get; set; }
 
     }
 
