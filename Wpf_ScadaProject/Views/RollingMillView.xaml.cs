@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Wpf_ScadaProject
+namespace Wpf_ScadaProject.Views
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для RollingMillView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class RollingMillView : Window
     {
-        public MainWindow()
+        public RollingMillView()
         {
             InitializeComponent();
         }
