@@ -74,6 +74,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Models\RollingMillModelBckTM.cs" />
     <Compile Include="ViewModels\RollingMillViewModel.cs" />
     <Compile Include="Views\RollingMillView.xaml.cs">
       <DependentUpon>RollingMillView.xaml</DependentUpon>
@@ -107,9 +108,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Include="Views\RollingMillView.xaml">
       <SubType>Designer</SubType>
