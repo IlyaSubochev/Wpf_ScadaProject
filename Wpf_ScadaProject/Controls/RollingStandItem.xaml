@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="Wpf_ScadaProject.Controls.RollingStandItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Wpf_ScadaProject.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="120" d:DesignWidth="80">
+    <UniformGrid Rows="2">
+        <Ellipse Width="50" Height="50" VerticalAlignment="Top"
+                 Fill="Green">
+            
+        </Ellipse>
+        <Ellipse Width="50" Height="50" VerticalAlignment="Bottom"
+                 Fill="Green">
+            
+        </Ellipse>
+    </UniformGrid>
+</UserControl>

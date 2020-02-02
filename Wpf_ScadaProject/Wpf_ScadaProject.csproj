@@ -74,6 +74,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Controls\RollingStandItem.xaml.cs">
+      <DependentUpon>RollingStandItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models\RollingMillModelBckTM.cs" />
     <Compile Include="ViewModels\RollingMillViewModel.cs" />
     <Compile Include="Views\RollingMillView.xaml.cs">
@@ -110,6 +113,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Page Include="Controls\RollingStandItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\RollingMillView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

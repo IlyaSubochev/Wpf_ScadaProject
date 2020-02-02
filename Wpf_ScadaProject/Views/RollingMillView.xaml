@@ -1,9 +1,10 @@
-﻿<Window x:Class="Wpf_ScadaProject.Views.RollingMillView"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_ScadaProject.Views"
+        xmlns:Controls="clr-namespace:Wpf_ScadaProject.Controls" x:Class="Wpf_ScadaProject.Views.RollingMillView"
         mc:Ignorable="d"
         Title="RollingMillView" Height="800" Width="1920">
     <Grid>
@@ -34,7 +35,10 @@
         <TextBlock x:Name="TestValue"
                     Grid.Row="0" Grid.Column="9" FontSize="30"
                    VerticalAlignment="Center"
-                   HorizontalAlignment="Center"></TextBlock>
-        
+                   HorizontalAlignment="Center"/>
+
+        <Controls:RollingStandItem Grid.Column="9" HorizontalAlignment="Center" Height="112" Margin="44.6,19,46.6,24.2" 
+                                   Grid.RowSpan="2" VerticalAlignment="Center" Width="100"/>
+
     </Grid>
 </Window>
