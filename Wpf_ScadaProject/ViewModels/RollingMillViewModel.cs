@@ -14,6 +14,13 @@ namespace Wpf_ScadaProject.ViewModels
     {
 		private int _testValue;
 		private DispatcherTimer timer=null;
+        private BindableCollection<Byte> _backColorTM;
+
+        public RollingMillViewModel()
+        {
+            _backColorTM = new BindableCollection<Byte>();
+            timeStart();
+        }
 		private void timeStart()
 		{
 			timer = new DispatcherTimer();
@@ -31,13 +38,14 @@ namespace Wpf_ScadaProject.ViewModels
                     plc.Open();
                     if (plc.IsConnected)
                     {
-                        int count = 0;
+                        Byte[] buffer2 = new Byte[18];
                         for (int i = 112; i < 2380; i += 126)
-                        {
-                            count += 1;
-                            var buffer = new RollingMillModelBckTM();
-                            plc.ReadClass(buffer, 9000, i);
-                        }
+                        {                           
+                            buffer2 = plc.ReadBytes(DataType.DataBlock, 9000, i, 1);
+                            BackColorTM.Add(buffer2[0]);
+                            buffer2[0] = 0;
+                        }                      
+                        
                     }
                     else
                         Console.WriteLine("Connection not alive");
@@ -63,15 +71,13 @@ namespace Wpf_ScadaProject.ViewModels
 			}
 		}
 
-		private BindableCollection<RollingMillModelBckTM> _backColorTM = new BindableCollection<RollingMillModelBckTM>();
+        public BindableCollection<Byte> BackColorTM
+        {
+            get
+            {
+                return _backColorTM;
+            }
+        }
 
-		public BindableCollection<RollingMillModelBckTM> BackColorTM
-		{
-			get 
-			{
-				return _backColorTM;
-			}
-		}
-
-	}
+    }
 }

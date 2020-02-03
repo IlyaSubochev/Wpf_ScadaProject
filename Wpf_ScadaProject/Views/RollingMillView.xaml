@@ -37,8 +37,8 @@
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"/>
 
-        <Controls:RollingStandItem Grid.Column="9" HorizontalAlignment="Center" Height="112" Margin="44.6,19,46.6,24.2" 
-                                   Grid.RowSpan="2" VerticalAlignment="Center" Width="100"/>
+        <Controls:RollingStandItem Grid.Column="6" HorizontalAlignment="Center" Height="78" Margin="44,39,47,37" 
+                                   Grid.RowSpan="2" VerticalAlignment="Center" Width="100" Grid.Row="1"/>
 
     </Grid>
 </Window>

@@ -8,24 +8,30 @@ namespace Wpf_ScadaProject.Models
 {
     public class RollingMillModelBckTM
     {
-        public uint BackColorTM1 { get; set; }
-        public uint BackColorTM2 { get; set; }
-        public uint BackColorTM3 { get; set; }
-        public uint BackColorTM4 { get; set; }
-        public uint BackColorTM5 { get; set; }
-        public uint BackColorTM6 { get; set; }
-        public uint BackColorTM7 { get; set; }
-        public uint BackColorTM8 { get; set; }
-        public uint BackColorTM9 { get; set; }
-        public uint BackColorTM10 { get; set; }
-        public uint BackColorTM11 { get; set; }
-        public uint BackColorTM12 { get; set; }
-        public uint BackColorTM13 { get; set; }
-        public uint BackColorTM14 { get; set; }
-        public uint BackColorTM15 { get; set; }
-        public uint BackColorTM16 { get; set; }
-        public uint BackColorTM17 { get; set; }
-        public uint BackColorTM18 { get; set; }
+        public RollingMillModelBckTM()
+        {
+            // BackColorTM = new Byte[18];
+            BackColorTM01 = 0;
+        }
+        public Byte[] BackColorTM { get; set; }
+        public Byte BackColorTM01 { get; set; }
+        public Byte BackColorTM02 { get; set; }
+        public Byte BackColorTM03 { get; set; }
+        public Byte BackColorTM04 { get; set; }
+        public Byte BackColorTM05 { get; set; }
+        public Byte BackColorTM06 { get; set; }
+        public Byte BackColorTM07 { get; set; }
+        public Byte BackColorTM08 { get; set; }
+        public Byte BackColorTM09 { get; set; }
+        public Byte BackColorTM10 { get; set; }
+        public Byte BackColorTM11 { get; set; }
+        public Byte BackColorTM12 { get; set; }
+        public Byte BackColorTM13 { get; set; }
+        public Byte BackColorTM14 { get; set; }
+        public Byte BackColorTM15 { get; set; }
+        public Byte BackColorTM16 { get; set; }
+        public Byte BackColorTM17 { get; set; }
+        public Byte BackColorTM18 { get; set; }
 
     }
 }

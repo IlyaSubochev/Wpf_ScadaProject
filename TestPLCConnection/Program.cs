@@ -32,8 +32,8 @@ namespace TestPLCConnection
                         count += 1;
                         var buffer = new RollingMill();
                         plc.ReadClass(buffer, 9000, i);
-                        // var buffer2 = plc.ReadBytes(DataType.DataBlock, 9000, i, 200);
-                        // buffer.GM[count-1]= BitConverter.ToUInt32(plc.ReadBytes(DataType.DataBlock, 9000, i, 4),0);
+                        //var buffer2 = plc.ReadBytes(DataType.DataBlock, 9000, i, 200);
+                        //buffer.GM[count - 1] = BitConverter.ToUInt32(plc.ReadBytes(DataType.DataBlock, 9000, i, 4), 0);
                         //Console.WriteLine($"G{count - 1} = {buffer.GM[count - 1]}");
                     }
                    

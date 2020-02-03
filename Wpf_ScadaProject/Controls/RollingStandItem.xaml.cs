@@ -24,5 +24,43 @@ namespace Wpf_ScadaProject.Controls
         {
             InitializeComponent();
         }
+        void RollingStandItemColor(int number)
+        {          
+                switch (number)
+                {
+                    case 0:
+                        Background = new SolidColorBrush(Colors.Gray);
+                        break;
+                    case 1:
+                        Background = new SolidColorBrush(Colors.Blue);
+                        break;
+                    case 2:
+                        Background = new SolidColorBrush(Colors.AliceBlue);
+                        break;
+                    case 4:
+                        Background = new SolidColorBrush(Colors.Green);
+                        break;
+                    case 8:
+                        Background = new SolidColorBrush(Colors.Black);
+                        break;
+                    case 16:
+                        Background = new SolidColorBrush(Colors.White);
+                        break;
+                    case 32:
+                        Background = new SolidColorBrush(Colors.Yellow);
+                        break;
+                    case 64:
+                        Background = new SolidColorBrush(Colors.Red);
+                        break;
+                    case 128:
+                        Background = new SolidColorBrush(Colors.LightGray);
+                        break;
+                    default:
+                        Background = new SolidColorBrush(Colors.Gray);
+                        break;                  
+                }
+            
+
+        }
     }
 }
