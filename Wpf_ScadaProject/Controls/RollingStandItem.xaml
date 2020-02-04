@@ -5,13 +5,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Wpf_ScadaProject.Controls"
              mc:Ignorable="d" 
-             d:DesignHeight="70" d:DesignWidth="60">
+             d:DesignHeight="120" d:DesignWidth="80">
     <UniformGrid Rows="2">
-        <Ellipse Width="30" Height="30" VerticalAlignment="Top"
-                 Fill="Green" >
+        <Ellipse x:Name="upperRoll" Width="50" Height="50" VerticalAlignment="Top"
+                 Fill="Green">
             
         </Ellipse>
-        <Ellipse Width="30" Height="30" VerticalAlignment="Bottom"
+        <Ellipse x:Name="lowerRoll" Width="50" Height="50" VerticalAlignment="Bottom"
                  Fill="Green" >
             
         </Ellipse>

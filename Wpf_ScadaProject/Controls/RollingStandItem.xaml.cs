@@ -19,11 +19,37 @@ namespace Wpf_ScadaProject.Controls
     /// Логика взаимодействия для RollingStandItem.xaml
     /// </summary>
     public partial class RollingStandItem : UserControl
-    {
+    {   
+     
         public RollingStandItem()
         {
             InitializeComponent();
         }
+
+        public Byte CurrentColor
+        {
+            get
+            {
+                return (Byte)GetValue(CurrentColorProperty);
+            }
+            set
+            {
+                SetValue(CurrentColorProperty, value);
+            }
+        }
+
+        public static readonly DependencyProperty CurrentColorProperty =
+            DependencyProperty.Register("CurrentColor", typeof(Byte), typeof(RollingStandItem),
+                new UIPropertyMetadata(0), new ValidateValueCallback(ValidateCurrentColor));
+
+        public static bool ValidateCurrentColor(object value)
+        {
+            if (Convert.ToInt32(value) >= 0 && Convert.ToInt32(value) <= 255)
+                return true;
+            else
+                return false;
+        }
+
         void RollingStandItemColor(int number)
         {          
                 switch (number)
