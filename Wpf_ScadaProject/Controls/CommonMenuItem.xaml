@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="Wpf_ScadaProject.Controls.CommonMenuItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Wpf_ScadaProject.Controls"
+             xmlns:r="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <!--<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StatusBar Grid.Row="1">
+            <StatusBar.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </ItemsPanelTemplate>
+            </StatusBar.ItemsPanel>
+            <TextBlock>Текст слева</TextBlock>
+            <StatusBarItem Grid.Column="1">
+                <TextBlock>Текст справа</TextBlock>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>-->
+    <r:Ribbon Title="Ribbon Test">
+        <r:Ribbon.ApplicationMenu>
+            <r:RibbonApplicationMenu>
+                <r:RibbonApplicationMenuItem>
+                    <r:RibbonApplicationMenuItem.Command>
+                        <r:RibbonCommand LabelTitle="_Close" LargeImageSource="images\close.png"
+               Executed="Close_Executed" />
+                    </r:RibbonApplicationMenuItem.Command>
+                </r:RibbonApplicationMenuItem>
+
+                <r:RibbonApplicationMenuItem>
+                    <r:RibbonApplicationMenuItem.Command>
+                        <r:RibbonCommand LabelTitle="_Open" LargeImageSource="images\open.png" Executed="Open_Executed" />
+                    </r:RibbonApplicationMenuItem.Command>
+                </r:RibbonApplicationMenuItem>
+
+                <r:RibbonApplicationMenuItem>
+                    <r:RibbonApplicationMenuItem.Command>
+                        <r:RibbonCommand LabelTitle="_Save" LargeImageSource="images\save.png"
+              Executed="Save_Executed" />
+                    </r:RibbonApplicationMenuItem.Command>
+                </r:RibbonApplicationMenuItem>
+            </r:RibbonApplicationMenu>
+        </r:Ribbon.ApplicationMenu>
+    </r:Ribbon>
+</UserControl>
