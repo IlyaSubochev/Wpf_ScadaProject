@@ -29,7 +29,7 @@
             </StatusBarItem>
         </StatusBar>
     </Grid>-->
-    <r:Ribbon Title="Ribbon Test">
+    <!--<r:Ribbon Title="Ribbon Test">
         <r:Ribbon.ApplicationMenu>
             <r:RibbonApplicationMenu>
                 <r:RibbonApplicationMenuItem>
@@ -53,5 +53,5 @@
                 </r:RibbonApplicationMenuItem>
             </r:RibbonApplicationMenu>
         </r:Ribbon.ApplicationMenu>
-    </r:Ribbon>
+    </r:Ribbon>-->
 </UserControl>

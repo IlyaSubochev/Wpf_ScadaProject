@@ -21,7 +21,7 @@ namespace TestPLCConnection
                     var bytes = plc.ReadBytes(DataType.DataBlock, 9000, 0, 200);
 
                     // Try get structure tag using struct - it's ok
-                    RollingMillStructTag test = (RollingMillStructTag)plc.ReadStruct(typeof(RollingMillStructTag), 9000);
+                    //RollingMillStructTag test = (RollingMillStructTag)plc.ReadStruct(typeof(RollingMillStructTag), 9000);
 
                     //Try get structure tag using class - it's ok
                     RollingMillStructTagClass testClass = new RollingMillStructTagClass();
@@ -78,14 +78,7 @@ namespace TestPLCConnection
             return resultBytes;
         }
 
-        public struct RollingMillStructTag 
-        {
-            public UInt32 DWordNF;
-            public UInt32 DWordNZR;
-            public UInt32 DWordVF;
-            public UInt32 DWordVPR;
-            public UInt32 DWOrdVZR;
-        }
+       
 
         
     }

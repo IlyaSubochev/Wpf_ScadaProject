@@ -50,41 +50,48 @@ namespace Wpf_ScadaProject.Controls
                 return false;
         }
 
-        void RollingStandItemColor(int number)
-        {          
-                switch (number)
+        void RollingStandItemColor(string name, Byte CurrentColor)
+        {
+            
+            object findEllipse = NameProperty;
+            if (findEllipse is Ellipse)
+            {
+                Ellipse currentEllipse = findEllipse as Ellipse;
+
+                switch (Convert.ToInt32(CurrentColor))
                 {
                     case 0:
-                        Background = new SolidColorBrush(Colors.Gray);
+                        currentEllipse.Fill = new SolidColorBrush(Colors.Gray);
                         break;
                     case 1:
-                        Background = new SolidColorBrush(Colors.Blue);
+                        currentEllipse.Fill = new SolidColorBrush(Colors.Blue);
                         break;
                     case 2:
-                        Background = new SolidColorBrush(Colors.AliceBlue);
+                        currentEllipse.Fill = new SolidColorBrush(Colors.AliceBlue);
                         break;
                     case 4:
-                        Background = new SolidColorBrush(Colors.Green);
+                        currentEllipse.Fill = new SolidColorBrush(Colors.Green);
                         break;
                     case 8:
-                        Background = new SolidColorBrush(Colors.Black);
+                        currentEllipse.Fill = new SolidColorBrush(Colors.Black);
                         break;
                     case 16:
-                        Background = new SolidColorBrush(Colors.White);
+                        currentEllipse.Fill = new SolidColorBrush(Colors.White);
                         break;
                     case 32:
-                        Background = new SolidColorBrush(Colors.Yellow);
+                        currentEllipse.Fill = new SolidColorBrush(Colors.Yellow);
                         break;
                     case 64:
-                        Background = new SolidColorBrush(Colors.Red);
+                        currentEllipse.Fill = new SolidColorBrush(Colors.Red);
                         break;
                     case 128:
-                        Background = new SolidColorBrush(Colors.LightGray);
+                        currentEllipse.Fill = new SolidColorBrush(Colors.LightGray);
                         break;
                     default:
-                        Background = new SolidColorBrush(Colors.Gray);
-                        break;                  
+                        currentEllipse.Fill = new SolidColorBrush(Colors.Gray);
+                        break;
                 }
+            }
             
 
         }
