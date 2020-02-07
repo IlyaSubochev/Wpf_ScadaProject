@@ -26,6 +26,7 @@ namespace Wpf_ScadaProject.Controls
             InitializeComponent();
         }
 
+        
         //public Byte CurrentColor
         //{
         //    get
@@ -52,7 +53,7 @@ namespace Wpf_ScadaProject.Controls
 
         //void RollingStandItemColor(string name, Byte CurrentColor)
         //{
-            
+
         //    object findEllipse = NameProperty;
         //    if (findEllipse is Ellipse)
         //    {

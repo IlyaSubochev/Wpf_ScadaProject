@@ -12,7 +12,7 @@
             
         </Ellipse>
         <Ellipse x:Name="lowerRoll" Width="50" Height="50" VerticalAlignment="Bottom"
-                 Fill="Green" >
+                 Fill="Green">
             
         </Ellipse>
     </UniformGrid>

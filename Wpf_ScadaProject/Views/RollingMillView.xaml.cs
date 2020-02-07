@@ -22,6 +22,12 @@ namespace Wpf_ScadaProject.Views
         public RollingMillView()
         {
             InitializeComponent();
+
+            RollingStand01.upperRoll.Fill = new SolidColorBrush(Colors.Black);
+            RollingStand01.lowerRoll.Fill = new SolidColorBrush(Colors.Red);
         }
+        
+        
+
     }
 }
