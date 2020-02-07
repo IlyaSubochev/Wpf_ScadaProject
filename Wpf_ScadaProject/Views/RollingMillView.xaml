@@ -37,12 +37,7 @@
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"/>
 
-        <Controls:RollingStandItem x:Name="RollingStad01" Grid.Column="9" HorizontalAlignment="Center" Height="112" Margin="44.6,19,46.6,24.2" 
-                                   Grid.RowSpan="2" VerticalAlignment="Center" Width="100"/>
-        <Controls:RollingStandItem x:Name="RollingStad02" Grid.Column="8" HorizontalAlignment="Center" Height="112" Margin="44.6,19,46.6,24.2" 
-            Grid.RowSpan="2" VerticalAlignment="Center" Width="100"/>
-        <Controls:RollingStandItem x:Name="RollingStad03" Grid.Column="7" HorizontalAlignment="Center" Height="112" Margin="44.6,19,46.6,24.2" 
-            Grid.RowSpan="2" VerticalAlignment="Center" Width="100"/>
+        
 
     </Grid>
 </Window>
