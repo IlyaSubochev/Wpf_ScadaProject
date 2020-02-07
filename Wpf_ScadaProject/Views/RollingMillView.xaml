@@ -36,8 +36,9 @@
                     Grid.Row="0" Grid.Column="9" FontSize="30"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"/>
+        <Controls:RollingStandItem/>
 
-        
+
 
     </Grid>
 </Window>
