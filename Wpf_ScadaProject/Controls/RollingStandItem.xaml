@@ -6,9 +6,9 @@
              xmlns:local="clr-namespace:Wpf_ScadaProject.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="120" d:DesignWidth="80">
-    <UniformGrid Rows="2">
+    <UniformGrid Rows="2" >
         <Ellipse x:Name="upperRoll" Width="50" Height="50" VerticalAlignment="Top"
-                 Fill="Green">
+                 Fill="{Binding}">
             
         </Ellipse>
         <Ellipse x:Name="lowerRoll" Width="50" Height="50" VerticalAlignment="Bottom"

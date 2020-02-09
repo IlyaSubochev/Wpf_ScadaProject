@@ -36,7 +36,7 @@
                     Grid.Row="0" Grid.Column="9" FontSize="30"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"/>
-        <Controls:RollingStandItem x:Name="RollingStand01"
+        <Controls:RollingStandItem x:Name="RollingStand0" 
                                    Grid.RowSpan="2" VerticalAlignment="Center"
                                    />
 

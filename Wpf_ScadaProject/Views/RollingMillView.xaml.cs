@@ -21,22 +21,25 @@ namespace Wpf_ScadaProject.Views
     public partial class RollingMillView : Window
     {
         public DependencyObject rollingMillView = new RollingMillView();
+        public RollingMillViewModel RMViewModel { get; }
         public RollingMillView()
         {
             InitializeComponent();
             RMViewModel = new RollingMillViewModel();
-            
-            RollingStand01.upperRoll.Fill = new SolidColorBrush(Colors.Black);
-            RollingStand01.lowerRoll.Fill = new SolidColorBrush(Colors.Red);
+            RollingMillViewShow();
+            //RollingStand01.upperRoll.Fill = new SolidColorBrush(Colors.Black);
+            //RollingStand01.lowerRoll.Fill = new SolidColorBrush(Colors.Red);
         }
 
-        public RollingMillViewModel RMViewModel { get; }
 
-        void Show()
+
+        void RollingMillViewShow()
         {
+            int count = 0;
             foreach (var item in RMViewModel.BackColorTM)
             {
-                
+                FindElement("RollingStand" + count, item);
+                count += 1;
             }
         }
         public static IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
@@ -59,13 +62,51 @@ namespace Wpf_ScadaProject.Views
             }
         }
 
-        void FindElement()
+        void FindElement(string name, byte item)
         {
             foreach (UserControl itemUC in FindVisualChildren<UserControl>(rollingMillView))
             {
+                if (name == itemUC.Name)
+                {
+                    object currentEllipse = new Ellipse();
+                    currentEllipse = itemUC.FindName("upperRoll");
+                    switch (Convert.ToInt32(item))
+                    {
+                        case 0:
+                            currentEllipse = new SolidColorBrush(Colors.Gray);
+                            break;
+                        case 1:
+                            currentEllipse = new SolidColorBrush(Colors.Blue);
+                            break;
+                        case 2:
+                            currentEllipse = new SolidColorBrush(Colors.AliceBlue);
+                            break;
+                        case 4:
+                            currentEllipse = new SolidColorBrush(Colors.Green);
+                            break;
+                        case 8:
+                            currentEllipse = new SolidColorBrush(Colors.Black);
+                            break;
+                        case 16:
+                            currentEllipse = new SolidColorBrush(Colors.White);
+                            break;
+                        case 32:
+                            currentEllipse = new SolidColorBrush(Colors.Yellow);
+                            break;
+                        case 64:
+                            currentEllipse = new SolidColorBrush(Colors.Red);
+                            break;
+                        case 128:
+                            currentEllipse = new SolidColorBrush(Colors.LightGray);
+                            break;
+                        default:
+                            currentEllipse = new SolidColorBrush(Colors.Gray);
+                            break;
 
+                    }
+                }
             }
-        }
 
+        }
     }
 }
